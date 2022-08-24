@@ -1,0 +1,1405 @@
+:root{
+  --text-color: #ffffff;
+  --text-color2: #212121;
+  --background-color: #0d0d0d;
+  --events-color: #151615;
+  --button-color: #88D709;
+  --button-color2: #04C80B;
+  --font-weight-p: normal normal normal 20px/1.8rem avenir-lt-w01_35-light1475496,avenir-lt-w05_35-light,sans-serif;
+  --font-weight-p2: normal normal normal 16px/1.75em avenir-lt-w01_35-light1475496,avenir-lt-w05_35-light,sans-serif;
+  --font-weight-p3: normal normal normal 22px/1.75em avenir-lt-w01_35-light1475496,avenir-lt-w05_35-light,sans-serif;
+  --font-weight-p4: normal normal normal 26px/1.75rem avenir-lt-w01_35-light1475496,avenir-lt-w05_35-light,sans-serif;
+  --font-botones: normal normal normal 24px/1.75rem avenir-lt-w01_35-light1475496,avenir-lt-w05_35-light,sans-serif;
+  --font-botones-inicio: normal normal normal 18px/1.75rem avenir-lt-w01_35-light1475496,avenir-lt-w05_35-light,sans-serif;
+  --font-botones-inicio-reducidos: normal normal normal 12px/1.75rem avenir-lt-w01_35-light1475496,avenir-lt-w05_35-light,sans-serif;
+}
+
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body{
+  width: 100%;
+  font-family: 'DM Sans', sans-serif;
+  font-family: 'Inter', sans-serif;
+  font-family: 'Oswald', sans-serif;
+  background-color: var(--text-color);
+  color: var(--background-color);
+  overflow-x: hidden;
+}
+
+
+
+
+
+/* Efectos */
+
+.fadeTop {
+  opacity: 0; 
+  transform: translate(0, 10vh);
+  transition: all 1s;
+}
+
+.fadeRight {
+  opacity: 0;
+  transform: translate(10vh, 0vh);
+  transition: all 1s;
+}
+
+.fadeLeft {
+  opacity: 0;
+  transform: translate(-10vh, 0vh);
+  transition: all 1s;
+}
+  
+.visible {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+
+
+
+
+
+
+/* Barra de navegación */
+
+.nav{
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  background: var(--text-color);
+  padding: 10px;
+  box-shadow: 0 8px 32px 0 var(--events-color);
+  z-index: 3;
+}
+
+.logo-nombre-eslogan{
+  display: flex;
+}
+
+.nombre-eslogan{
+  margin: 30px;
+  font-weight: bold;
+}
+
+.nav .logo-nombre-eslogan .logo{
+  width: 150px;
+  height: 100px;
+  margin-left: 30px;
+}
+
+
+
+/* Menu de navegación */
+
+.nav-menu{
+  position: absolute;
+  right: 50px;
+  top: 90px;
+}
+
+.inactive{
+  display: none;
+}
+
+.nav-menu-item{
+  background: var(--text-color);
+  font-weight: bold;
+  border: 1px solid var(--events-color);
+  width: 200px;
+  height: 40px;
+  list-style: none;
+  box-shadow: 0 8px 32px 0 var(--events-color);
+}
+
+.nav-menu-item:hover{
+  background: var(--button-color);
+  transform: scale(1.2);
+}
+
+.nav-menu-item .nav-menu-link{
+  text-decoration: none;
+  color: var(--events-color);
+  display: block;
+  height: 100%;
+  margin-top: 7px;
+}
+
+.nav-menu-item .nav-menu-link:hover{
+  color: var(--text-color);
+}
+
+.nav-menu-link img{
+  margin-left: 20px;
+}
+
+.nav-menu-link span{
+  margin-left: 10px;
+}
+
+.hamburguer-menu{
+  width: 45px;
+  margin-right: 50px;
+  margin: 0 60px;
+  cursor: pointer;
+}
+
+
+/* Main */
+
+main{
+  padding-top: 120px;
+  width: 90%;
+  background: var(--events-color);
+  color: var(--text-color);
+  margin: 20px auto;
+}
+
+
+
+
+
+
+
+/* Sección Carmentraining */
+
+.carmentraining{
+  text-align: center;
+  color: var(--text-color);
+  margin: 20px auto;
+  padding: 30px;
+}
+
+.carmentraining h1{
+  font-size: 68px;
+  color: var(--button-color);
+}
+
+.carmentraining h2{
+  font-size: 48px;
+}
+
+.carmentraining h3{
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.carmentraining p{
+  text-align: center;
+  display: inline-block;
+  max-width: 1024px;
+}
+
+
+
+
+
+
+
+
+/* Sección instagram */
+
+.instagram{
+  display: grid;
+  gap: 10px;
+  width: 100%;
+  height: 600px;
+  padding: 10px;
+  margin-bottom: 20px;
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.instagram .instagram-item{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  scroll-snap-align: center;
+}
+
+
+
+
+
+
+
+
+/* Sección quien soy */
+
+.container-quien-soy{
+  display: grid;
+  grid-template-columns: 50% 50%;
+  padding: 20px;
+  align-items: center;
+  justify-items: center;
+}
+
+.container-quien-soy img{
+  width: 70%;
+  object-fit: cover;
+}
+
+.container-quien-soy .text-container-quien-soy{
+  width: 80%;
+}
+
+.text-container-quien-soy p:nth-child(1){
+  font-size: 32px;
+  color: var(--button-color);
+  margin-bottom: 20px;
+}
+
+.text-container-quien-soy a{
+  font-size: 24px;
+  color: var(--button-color);
+}
+
+
+
+
+
+
+
+
+
+/* Sección que hago */
+
+.que-hago{
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 1fr;
+  padding: 20px;
+  margin-bottom: 20px;
+  align-items: center;
+  justify-items: center;
+}
+
+.section-picture{
+  width: 100%;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+
+.section-picture img{
+  width: 70%;
+  object-fit: cover;
+}
+
+.articles{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.articles .descripcion{
+  width: 90%;
+}
+
+.articles .descripcion-titulo{
+  width: 90%;
+}
+
+.articles .descripcion-titulo p:nth-child(1){
+  font-size: 32px;
+  color: var(--button-color);
+  margin-bottom: 20px;
+}
+
+.articles .descripcion-titulo p:nth-child(2){
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+.articles .descripcion p:nth-child(1){
+  font-size: 20px;
+  color: var(--button-color);
+  margin-bottom: 8px;
+  margin-top: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Sección preguntas frecuentes */
+
+.contenedor-preguntas-frecuentes{
+  width: 100%;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.contenedor-imagen-titulo{
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.contenedor-imagen-titulo img{
+  width: 100%;
+  height: 350px;
+}
+
+.contenedor-imagen-titulo p:nth-child(2){
+  position: absolute;
+  font-size: 32px;
+  width: 300px;
+  top: 25%;
+  left: 42%;
+}
+
+.contenedor-imagen-titulo p:nth-child(3){
+  position: absolute;
+  font-size: 28px;
+  width: 300px;
+  top: 35%;
+  left: 47%;
+}
+
+.respuestas{
+  width: 80%;
+  margin: 20px auto;
+  text-align: center;
+}
+
+.respuesta p:nth-child(1){
+  font-size: 24px;
+  color: var(--button-color);
+  margin-bottom: 8px;
+  margin-top: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Bloque de medidas */
+
+#toma-medidas{
+  width: 100%;
+  display: flex;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  padding: 20px;
+  font-weight: bold;
+}
+
+.container-all{
+  width: 90%;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.container-all h6{
+  font: var(--font-weight-p);
+  margin: 0 auto;
+  padding: 10px;
+  background: var(--button-color);
+  color: var(--events-color);
+  box-shadow: 0px 4px 8px var(--text-color);
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.container-all .titulo-IMC{
+  color: var(--button-color);
+  font-size: 28px;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+.parrrafo-IMC{
+  margin-bottom: 20px;
+}
+
+.tabla{
+  margin: 40px auto;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tabla-medidas-celdas{
+  width: 300px;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+#Peso{
+  font: var(--font-weight-p2);
+  text-align: center;
+}
+
+#Estatura{
+  font: var(--font-weight-p2);
+  text-align: center;
+}
+
+.calcula-medidas{
+  background-color: transparent;
+  border: none;
+  color: var(--text-color);
+  text-align: center;
+  font-size: 1.4rem;
+  padding: 12px;
+  width: 130px;
+  height: 50px;
+  cursor: pointer;
+  box-shadow: 0px 4px 8px var(--button-color);
+  text-decoration: none;
+}
+  
+.calcula-medidas:hover,
+.calcula-medidas:focus{
+    outline     : none;
+    background  : var(--text-color);
+    color       : var(--events-color);
+    font-weight: bold;
+}
+
+.parrafos{
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+}
+
+#Resultado{
+  background-color: transparent;
+  color: red;
+  text-align: center;
+  font-size: 24px
+}
+
+#Explicacion{
+  background-color: transparent;
+  color: red;
+  text-align: center;
+  font-size: 24px
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Bloque metabolismo basal */
+
+#metabolismo-basal{
+  width: 100%;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  padding: 20px;
+  font-weight: bold;
+}
+  
+.metabolismo-container-all{
+  width: 90%;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.metabolismo-container-all h6{
+  font: var(--font-weight-p);
+  margin: 0 auto;
+  padding: 10px;
+  background: var(--button-color);
+  color: var(--events-color);
+  box-shadow: 0px 4px 8px var(--text-color);
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.metabolismo-container-all p{
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.metabolismo-tabla-completo{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.metabolismo-tabla{
+  width: 40%;
+  padding: 20px;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.tabla-metabolismo-celdas{
+  width: 260px;
+  margin-bottom: 10px;
+}
+
+#Sexo{
+  width: 200px;
+  text-align: center;
+}
+
+#Edad{
+  width: 200px;
+  text-align: center;
+}
+
+#Peso1{
+  width: 200px;
+  text-align: center;
+}
+
+#Estatura1{
+  width: 200px;
+  text-align: center;
+}
+
+.calcula-metabolismo{
+  background-color: transparent;
+  border: none;
+  color: var(--text-color);
+  text-align: center;
+  font-size: 1.4rem;
+  padding: 12px;
+  width: 130px;
+  height: 50px;
+  cursor: pointer;
+  box-shadow: 0px 4px 8px var(--button-color);
+  text-decoration: none;
+  margin-top: 20px;
+}
+  
+.calcula-metabolismo:hover,
+.calcula-metabolismo:focus {
+  outline     : none;
+  background  : var(--text-color);
+  color       : var(--events-color);
+  font-weight: bold;
+}
+
+.parrafos1{
+  width: 60%;
+  padding: 20px;
+  font-weight: bold;
+  justify-content: center;
+}
+
+#Resultado1{
+  background-color: transparent;
+  color: red;
+  text-align: center;
+  font-size: 22px
+}
+
+#Explicacion1{
+  background-color: transparent;
+  color: red;
+  text-align: center;
+  font-size: 22px
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Bloque de formulario */
+
+.seccion-formulario{
+  width: 100%;
+  background-color: var(--button-color);
+  margin: 0 auto;
+  padding: 20px;
+  font-weight: bold;
+}
+
+.empieza_el_cambio{
+  display: flex;
+  margin: 0 auto;
+  padding: 20px;
+  width: 95%;
+  background: var(--events-color);
+  font-weight: bold;
+}
+
+.foto{
+  width: 50%;
+  object-fit: cover;
+}
+
+
+.bloque-formulario{
+  width: 50%;
+  align-self: center;
+  box-sizing: border-box;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+
+.bloque-formulario article{
+  margin-bottom: 25px;
+  display: inline-block;
+  font-weight: bold;
+  color: var(--button-color);
+  font-size: 28px;
+}
+
+.formulario{
+  margin : 30px auto;
+  box-sizing: border-box;
+  display  : flex;
+  flex-direction: column;
+}
+
+.formulario .celdas{
+  max-width: 320px;
+  width: 320px;
+  color: var(--button-color);
+  border: 2px solid var(--button-color2);
+  border-radius: 10px;
+  padding: 10px 25px;
+  background: transparent;
+  font: var(--font-weight-p2);
+  margin-bottom: 20px;
+}
+
+.formulario .celdas:active {
+  box-shadow: 2px 2px 15px var(--button-color) inset;
+}
+
+
+.formulario textarea{
+  font: var(--font-weight-p2);
+  width: 320px;
+  max-width: 320px;
+  height: 120px;
+  color: var(--button-color);
+  border: 2px solid var(--button-color2);
+  border-radius: 10px;
+  padding: 10px 25px;
+  background: transparent;
+}
+
+.formulario textarea:active {
+  box-shadow: 2px 2px 15px var(--button-color) inset;
+}
+
+.formulario .boton{
+  padding: 5px;
+  width: 300px;
+  max-width: 300px;
+  font: bold .6em sans-serif;
+  border: 2px solid #333;
+  border-radius: 5px;
+  background: none;
+  cursor: pointer;
+  background-color: var(--button-color);
+  font: normal normal normal 20px/1.75em avenir-lt-w01_35-light1475496,avenir-lt-w05_35-light,sans-serif;
+  font-weight: bold;
+  outline: 1.5px solid rgb(79, 187, 52);
+  outline-offset: .3rem;
+}
+
+.formulario .boton:hover,
+.formulario .boton:focus {
+  outline     : none;
+  background  : var(--text-color);
+  color       : var(--events-color);
+  transform: scale(1.2);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* CSS Whatsapp Chat */
+
+#whatsapp-chat {
+  position: fixed;
+  background: #fff;
+  width: 350px;
+  border-radius: 10px;
+  box-shadow: 0 1px 15px rgba(32, 33, 36, 0.28);
+  bottom: 90px;
+  right: 30px;
+  overflow: hidden;
+  z-index: 99;
+  animation-name: showchat;
+  animation-duration: 1s;
+  transform: scale(1);
+}
+
+a.blantershow-chat {
+  background: var(--button-color);
+  color: var(--events-color);
+  position: fixed;
+  display: flex;
+  font-weight: 400;
+  justify-content: space-between;
+  z-index: 98;
+  bottom: 60px;
+  right: 30px;
+  font-size: 15px;
+  padding: 10px 20px;
+  border-radius: 30px;
+  box-shadow: 0 1px 15px rgba(32, 33, 36, 0.28);
+}
+
+a.blantershow-chat svg {
+  transform: scale(1.2);
+  margin: 0 10px 0 0;
+}
+
+.header-chat {
+  background: #095e54;
+  color: #fff;
+  padding: 20px;
+}
+
+.header-chat .head-home p {
+  font-size: 20px;
+  text-align: center;
+  margin: 0 0 10px;
+}
+
+.header-chat p {
+  font-size: 14px;
+  line-height: 1.7;
+  margin: 0;
+}
+
+.info-avatar {
+  position: relative;
+}
+
+.info-avatar img {
+  border-radius: 10%;
+  width: 60px;
+  float: left;
+  margin: 0 10px 0 0;
+}
+
+.info-avatar:before {
+  content: "\f232";
+  z-index: 1;
+  font-family: "Font Awesome 5 Brands";
+  background: #23ab23;
+  color: #fff;
+  padding: 4px 5px;
+  border-radius: 100%;
+  position: absolute;
+  top: 30px;
+  left: 40px;
+}
+
+.info-chat span {
+  display: block;
+}
+
+#get-label,
+span.chat-label {
+  font-size: 14px;
+  color: #888;
+}
+
+#get-nama,
+span.chat-nama {
+  margin: 10px 0 0;
+  font-size: 16px;
+  font-weight: 700;
+  color: #222;
+  text-align: center;
+}
+
+#get-label,
+#get-nama {
+  color: #fff;
+}
+span.my-number {
+  display: none;
+}
+
+.blanter-msg {
+  color: #444;
+  padding: 20px;
+  font-size: 12.5px;
+  text-align: center;
+  border-top: 1px solid #ddd;
+}
+
+textarea#chat-input {
+  border: none;
+  font-family: "Arial", sans-serif;
+  width: 100%;
+  height: 20px;
+  outline: none;
+  resize: none;
+}
+
+a#send-it {
+  color: #555;
+  width: 40px;
+  margin: -5px 0 0 5px;
+  font-weight: 700;
+  padding: 8px;
+  background: #eee;
+  border-radius: 10px;
+}
+
+.first-msg {
+  background: #f5f5f5;
+  padding: 30px;
+  text-align: center;
+}
+
+.first-msg span {
+  background: #e2e2e2;
+  color: #333;
+  font-size: 14.2px;
+  line-height: 1.7;
+  border-radius: 10px;
+  padding: 15px 20px;
+  display: inline-block;
+}
+
+.start-chat .blanter-msg {
+  display: flex;
+}
+
+#get-number {
+  display: none;
+}
+
+a.close-chat {
+  position: absolute;
+  top: 5px;
+  right: 15px;
+  color: #fff;
+  font-size: 30px;
+}
+
+@keyframes showhide {
+  from {
+      transform: scale(0.5);
+      opacity: 0;
+  }
+}
+
+@keyframes showchat {
+  from {
+      transform: scale(0);
+      opacity: 0;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #whatsapp-chat {
+      width: auto;
+      left: 5%;
+      right: 5%;
+      font-size: 80%;
+  }
+}
+
+.hide {
+  display: none;
+  animation-name: showhide;
+  animation-duration: 1.5s;
+  transform: scale(1);
+  opacity: 1;
+}
+
+.show {
+  display: block;
+  animation-name: showhide;
+  animation-duration: 1.5s;
+  transform: scale(1);
+  opacity: 1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Bloque del footer */
+
+footer{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  background: var(--text-color);
+  padding: 10px;
+  box-shadow: 0 8px 32px 8px var(--events-color);
+  z-index: 3;
+}
+
+.left{
+  margin-left: 80px;
+}
+
+.right{
+  margin-right: 50px;
+}
+
+.right img{
+  width: 40px;
+  list-style: none;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.right img:hover{
+  transform: scale(1.2);
+}
+
+
+
+
+
+
+
+
+
+
+/* Diseño responsive */
+
+@media only screen and (min-width: 320px) and (max-width: 768px){
+
+  /* Barra de navegación */
+
+  .nav{
+    justify-content: flex-start;
+  }
+
+  .nombre-eslogan{
+    margin: 10px;
+    margin-top: 0;
+    font-weight: bold;
+    width: 180px;
+  }
+
+  .nav .logo-nombre-eslogan .logo{
+    margin-left: 0;
+    margin-top: 10px;
+    width: 100px;
+    height: 70px;
+  }
+
+  .hamburguer-menu{
+    width: 35px;
+    position: absolute;
+    right: -50px;
+    top: 40px;
+    margin: 0 60px;
+    cursor: pointer;
+  }
+
+
+  /* Menu de navegación */
+
+  .nav-menu{
+    right: 30px;
+    top: 70px;
+  }
+
+  .nav-menu-item{
+    width: 160px;
+    height: 40px;
+  }
+
+
+  /* Sección Carmentraining */
+
+  .carmentraining h1{
+    font-size: 38px;
+  }
+
+  .carmentraining h2{
+    font-size: 34px;
+  }
+
+  .carmentraining h3{
+    font-size: 24px;
+  }
+
+
+  /* Sección instagram */
+
+  .slider{
+    display: flex;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    border-radius: 2px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  }
+
+  .instagram .instagram-item{
+    scroll-snap-align: center;
+  }
+
+  /* .instagram{
+    display: flex;
+    flex-wrap: wrap;
+    height: auto;
+  } */
+
+  /* Sección quien soy */
+
+  .container-quien-soy{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .container-quien-soy img{
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .container-quien-soy .text-container-quien-soy{
+    width: 100%;
+  }
+
+  /* Sección que hago */
+
+  .que-hago{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .section-picture img{
+    width: 100%;
+  }
+
+  .articles{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .articles .descripcion{
+    width: 100%;
+  }
+
+  .articles .descripcion-titulo{
+    width: 100%;
+  }
+
+  /* Sección preguntas frecuentes */
+
+  .contenedor-imagen-titulo img{
+    height: 250px;
+  }
+
+  .contenedor-imagen-titulo p{
+    display: none;
+  }
+
+  .respuestas{
+    width: 90%;
+  }
+
+  /* Bloque de medidas */
+
+  .container-all{
+    width: 100%;
+    padding: 0;
+  }
+
+  .tabla{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .tabla-medidas-celdas{
+    width: 300px;
+    margin-right: 20px;
+    margin-left: 20px;
+  }
+
+  .calcula-medidas{
+    margin-top: 20px;
+  }
+
+  /* Bloque metabolismo basal */
+
+  .metabolismo-container-all{
+    width: 100%;
+    padding: 0;
+  }
+
+  .metabolismo-tabla-completo{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .metabolismo-tabla{
+    width: 100%;
+  }
+
+  .parrafos1{
+    width: 100%;
+    padding: 0;
+    font-weight: bold;
+    justify-content: center;
+  }
+
+  /* Bloque de formulario */
+
+  .seccion-formulario{
+    margin: 0;
+    padding: 10px;
+  }
+
+  .empieza_el_cambio{
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 10px;
+  }
+
+  .foto{
+    width: 100%;
+  }
+
+  .bloque-formulario{
+    width: 100%;
+  }
+
+  .formulario{
+    margin : 0;
+  }
+
+  .formulario .celdas{
+    max-width: 320px;
+    width: 250px;
+  }
+
+  .formulario textarea{
+    width: 320px;
+    max-width: 250px;
+  }
+
+  .formulario .boton{
+    width: 250px;
+    max-width: 300px;
+  }
+
+  /* CSS Whatsapp Chat */
+
+  #whatsapp-chat {
+    bottom: 150px;
+    right: 20px;
+  }
+
+  a.blantershow-chat {
+    bottom: 70px;
+    right: 10px;
+    background: transparent;
+  }
+
+  a.blantershow-chat:hover {
+    transform: scale(1.2);
+  }
+
+  a.blantershow-chat svg{
+    width: 40px;
+    margin-left: 10px;
+  }
+
+  a.blantershow-chat span{
+    display: none;
+  }
+
+  /* Bloque del footer */
+
+  .left{
+    margin-left: 20px;
+  }
+
+  .right{
+    margin-right: 20px;
+  }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1024px){
+
+  /* Barra de navegación */
+
+  .nombre-eslogan{
+    margin: 10px;
+    margin-top: 10px;
+    width: 250px;
+  }
+
+  /* Sección instagram */
+
+  .instagram{
+    display: flex;
+    flex-wrap: wrap;
+    height: auto;
+  }
+
+  .container-quien-soy img{
+    width: 90%;
+    object-fit: cover;
+  }
+
+  .container-quien-soy .text-container-quien-soy{
+    width: 100%;
+  }
+
+  /* Sección que hago */
+
+  .que-hago{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .section-picture img{
+    width: 100%;
+  }
+
+  .articles{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .articles .descripcion{
+    width: 100%;
+  }
+
+  .articles .descripcion-titulo{
+    width: 100%;
+  }
+
+  /* Sección preguntas frecuentes */
+
+  .contenedor-imagen-titulo img{
+    height: 250px;
+  }
+
+  .contenedor-imagen-titulo p{
+    display: none;
+  }
+
+  .respuestas{
+    width: 90%;
+  }
+
+  /* Bloque de formulario */
+
+  .empieza_el_cambio{
+    padding: 0;
+  }
+  
+  .bloque-formulario article{
+    font-size: 1.8rem;
+  }
+
+  .formulario .celdas{
+    max-width: 320px;
+    width: 300px;
+  }
+
+  .formulario textarea{
+    width: 300px;
+    max-width: 320px;
+    height: 120px;
+  }
+
+  /* CSS Whatsapp Chat */
+
+  #whatsapp-chat {
+    bottom: 150px;
+    right: 20px;
+  }
+
+  a.blantershow-chat {
+    bottom: 70px;
+    right: 10px;
+    background: transparent;
+  }
+
+  a.blantershow-chat:hover {
+    transform: scale(1.2);
+  }
+
+  a.blantershow-chat svg{
+    width: 40px;
+    margin-left: 10px;
+  }
+
+  a.blantershow-chat span{
+    display: none;
+  }
+
+  /* Bloque del footer */
+
+  .left{
+    margin-left: 20px;
+  }
+
+  .right{
+    margin-right: 20px;
+  }
+}

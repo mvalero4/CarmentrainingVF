@@ -1,0 +1,234 @@
+
+/* Diseño responsive */
+
+@media only screen and (min-width: 768px){
+
+    :root{
+      --text-color: #fff;
+      --text-color2: #000000;
+      --background-color: #0d0d0d;
+      --events-color: #151615;
+      --button-color: #94E90A;
+      --button-color2: #00e600;
+      --font-weight-p: normal normal normal 16px/3.6rem avenir-lt-w01_35-light1475496,avenir-lt-w05_35-light,sans-serif;
+      --font-weight-p2: normal normal normal 12px/1.75em avenir-lt-w01_35-light1475496,avenir-lt-w05_35-light,sans-serif;
+      --font-weight-p3: normal normal normal 18px/1.75em avenir-lt-w01_35-light1475496,avenir-lt-w05_35-light,sans-serif;
+      --font-weight-p4: normal normal normal 22px/1.75rem avenir-lt-w01_35-light1475496,avenir-lt-w05_35-light,sans-serif;
+      --font-botones: normal normal normal 20px/1.75rem avenir-lt-w01_35-light1475496,avenir-lt-w05_35-light,sans-serif;
+      --font-botones-inicio: normal normal normal 14px/1.75rem avenir-lt-w01_35-light1475496,avenir-lt-w05_35-light,sans-serif;
+      --font-botones-inicio-reducidos: normal normal normal 8px/1.75rem avenir-lt-w01_35-light1475496,avenir-lt-w05_35-light,sans-serif;
+    }
+  
+    body{
+      font-size: 1.2rem;
+    }
+    
+    /* Barra de navegación */
+  
+    .nav{
+     flex-direction: column;
+     width: 100%;
+    }
+    
+  
+  
+    
+    
+    /* botones */
+  
+    .nav-menu{
+      flex-direction: row;
+      width: 100%;
+      align-items: center;
+      justify-content: center;
+    }
+  
+    .nav-menu-item{
+      margin-right: 0;
+    }
+  
+    .nav-menu-link{
+      margin-right: 0;
+    }
+  
+    .nav-menu-item-redes{
+      margin-right: 0;
+    }
+  
+    .nav-menu-link-redes{
+      padding: 8px;
+    }
+    
+    .carmentraining{
+      margin-top: 100px;
+    }
+  
+    .carmentraining h1{
+      font: var(--font-weight-p4);
+    }
+  
+    .quien-soy{
+      width: 95%;
+      margin: 0 auto;
+      padding: 30px;
+      font-weight: bold;
+      background-color: var(--button-color);
+    }
+    
+    .quien-soy picture{
+      flex-direction: column;
+    }
+  
+    .quien-soy img{
+      width: 100%;
+      object-fit: cover;
+    }
+    
+    .que-hago img{
+      width: 100%;
+      object-fit: cover;
+      display: flex;
+      float: right;
+      height: 550px;
+      margin-right: 0;
+      object-fit: cover;
+    }
+  
+    .preguntas figcaption p:nth-child(1){
+      margin-top: -250px;
+    }
+    
+    .preguntas p:nth-child(2){
+      margin-top: -140px;
+    }
+  
+    .preguntas_frecuentes{
+      margin-top: 350px;
+    }
+  
+    .preguntas_frecuentes img{
+      display: none;
+    }
+  
+    .respuestas{
+      margin-top: 20px;
+      padding: 20px;
+    }
+  
+    .container-all{
+      height: auto;
+    }
+  
+    .tabla{
+      flex-direction: column;
+      width: 100%;
+      padding: 5px;
+    }
+  
+    .tabla-medidas-celdas{
+      width: 200px;
+    }
+  
+    #Peso{
+      width: 100%;
+    }
+    
+    #Estatura{
+      width: 100%;
+    }
+  
+    .calcula-medidas{
+      margin-left: 0;
+      width: 100%;
+    }
+  
+    .metabolismo-container-all{
+      height: auto;
+    }
+  
+    .metabolismo-tabla{
+      flex-direction: column;
+      width: 100%;
+      padding: 5px;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      margin-left: 0;
+    }
+  
+    .tabla-metabolismo-celdas{
+      width: 200px;
+    }
+  
+    .calcula-metabolismo{
+      margin-left: 0;
+      width: 100%;
+    }
+  
+    .parrafos1{
+      margin-right: 0;
+      margin-left: 0;
+      width: 100%;
+      height: auto;
+    }
+  
+    .seccion-formulario{
+      height: auto;
+    }
+  
+    .foto img{
+      width: 100%;
+      object-fit: cover;
+    }
+    
+    .empieza_el_cambio{
+      width: 100%;
+      padding: 0;
+      height: auto;
+      flex-direction: column;
+    }
+    
+    .bloque-formulario{
+      margin : 0 auto;
+    }
+    
+    .bloque-formulario{
+      margin : 0 auto;
+    }
+    
+    .bloque-formulario article{
+      margin-bottom: 20px;
+    }
+    
+    .formulario{
+      width: 100%;
+      left: 0;
+      right: 0;
+      margin : 0 auto;
+      grid-gap : 10px;
+      position: static;
+    }
+    
+    .formulario .boton{
+    padding: 5px;
+    margin-bottom: 10px;
+    }
+  
+    footer{
+      flex-direction: column;
+    }
+    
+    .left{
+      margin-left: 10px;
+      width: 100%;
+      margin-bottom: 10px;
+    }
+    
+    .right{
+      margin-left: 0;
+    }
+    
+    .right img{
+      width: 30px;
+    }
+  
+  }

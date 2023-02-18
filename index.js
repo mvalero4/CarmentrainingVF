@@ -138,15 +138,37 @@ function enviar_mensaje(){
  
 const whatsapp_chat =document.getElementById("whatsapp-chat");
    
-   function cerrar_chat(){
-		whatsapp_chat.classList.add("hide");
-		whatsapp_chat.classList.remove("show");
-	   
-   }
+function cerrar_chat(){
+    whatsapp_chat.classList.add("hide");
+    whatsapp_chat.classList.remove("show");
+    
+}
    
-   function mostrar_chat(){
-	    whatsapp_chat.classList.add("show");
-		whatsapp_chat.classList.remove("hide");
-   }
+function mostrar_chat(){
+    whatsapp_chat.classList.add("show");
+    whatsapp_chat.classList.remove("hide");
+}
+
+
+
+/*******************Scroll Top**************************/
+
+const button = document.querySelector('.scroll-top-btn');
+
+window.addEventListener('scroll', () => {
+    let scrollTop = window.pageYOffset || documentElement.scrollTop;
+    if (scrollTop > 600) {
+        button.classList.remove('hidden');
+    }
+});
+
+function scrollTopButton() {
+    window.scrollTo({
+        behavior:"smooth",
+        top: 0,
+    })
+}
+
+button.addEventListener('click', scrollTopButton);
 
 

@@ -1024,6 +1024,8 @@ footer{
   /* Instagram */
 
   .instagram{
+    padding-right: 3rem;
+    padding-left: 3rem;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     overflow: hidden;

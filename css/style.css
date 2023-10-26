@@ -577,6 +577,9 @@ main{
 }
 
 .formulario .celdas{
+  display: flex;
+  align-items: center;
+  justify-content: center;
   max-width: 320px;
   width: 320px;
   color: var(--button-color);
@@ -594,10 +597,12 @@ main{
 
 
 .formulario textarea{
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font: var(--font-weight-p2);
-  width: 320px;
   max-width: 320px;
-  height: 120px;
+  max-height: 120px;
   color: var(--button-color);
   border: 2px solid var(--button-color2);
   border-radius: 10px;
@@ -858,6 +863,7 @@ a.close-chat {
   color: black;
   background-color: white;
   outline: 0;
+  border-radius: 0.5rem;
   border: none;
   transition: all 0.3s ease-out;
 }
